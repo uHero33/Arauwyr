@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+ac661343eb4ebf45c15ffe2f564afd74 CMakeFiles/arauwyr_automoc

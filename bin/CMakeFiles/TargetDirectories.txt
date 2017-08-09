@@ -1,0 +1,2 @@
+/home/sebesd/dev/Arauwyr/bin/CMakeFiles/arauwyr.dir
+/home/sebesd/dev/Arauwyr/bin/CMakeFiles/arauwyr_automoc.dir

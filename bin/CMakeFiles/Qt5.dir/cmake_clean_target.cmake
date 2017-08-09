@@ -1,0 +1,3 @@
+FILE(REMOVE_RECURSE
+  "libQt5.a"
+)

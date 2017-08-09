@@ -1,0 +1,2 @@
+/usr/bin/ar cr libQt5.a  CMakeFiles/Qt5.dir/Qt5_automoc.o
+/usr/bin/ranlib libQt5.a
