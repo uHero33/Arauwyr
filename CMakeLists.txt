@@ -1,42 +1,57 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 2.5)
+
+project(arauwyr)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+
 set(TARGET arauwyr)
 set(arauwyr_VERSION 0.0.1)
 
-set(QT_MODULES Widgets)
-find_qt_modules("${QT_MODULES}") # MUST USE QUOTES TOO!!!
-
-set(project_SRCS
-	
+set(project_sources
+	mainwindow.cpp
+	main.cpp
 )
 
-SET(project_MOC_HDRS
-	
+set(project_headers
+	mainwindow.hpp
 )
 
 SET(project_UIS
-	
+	mainwindow.ui
 )
 
-SET(project_HDRS
-	
-)
+add_executable(${TARGET} ${project_sources} ${project_headers} ${project_UIS})
 
-set(RESOURCE
-	
-)
+set(Qt5_BASE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/Qt5/5.6/gcc_64 CACHE STRING
+	"Qt5_BASE_DIR directory"
+	FORCE)
 
-qt5_add_resources(RESOURCE_ADDED ${RESOURCE})
 
-QT5_WRAP_CPP(project_MOC_SRCS ${project_MOC_HDRS} OPTIONS ${MOC_OPTIONS})
-QT5_WRAP_UI(project_UIS_H ${project_UIS})
-
+include_directories(${CMAKE_CURRENT_DIR})
 # Don't forget to include output directory, otherwise the MOC and UI header won't be found
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_executable(${TARGET} ${project_SRCS} ${project_MOC_SRCS} ${project_UIS_H} ${project_HDRS} ${RESOURCE_ADDED})
-target_link_libraries(${TARGET})
-qt5_use_modules(${TARGET}${QT_MODULES})
+# Must use like this:
+# set(QT_MODULES Core Widgets)
+# find_qt_modules("${QT_MODULE}") # MUST USE QUOTES HERE!!!
+macro(find_qt_modules TO_FIND_MODULES)
+	foreach(QT_Module ${TO_FIND_MODULES})
+		set(Qt5${QT_Module}_DIR ${Qt5_BASE_DIR}/lib/cmake/Qt5${QT_Module})
+		find_package(Qt5${QT_Module} REQUIRED)
+	endforeach(QT_Module)
+endmacro(find_qt_modules)
+
+set(QT_MODULES Core Gui Network OpenGL PrintSupport Qml Quick Script SerialPort Test WebChannel WebEngine WebEngineCore WebEngineWidgets Widgets Xml)
+set(QT_VERSION 5.6)
+
+find_qt_modules("${QT_MODULES}")
+qt5_use_modules( ${TARGET} ${QT_MODULES})
+
+
+
+
 
 if(DEFINED ENV{BUILDCOUNTER})
 	SET( VERSION_STRING ${arauwyr_VERSION}.$ENV{BUILDCOUNTER} )
@@ -44,4 +59,4 @@ else()
 	SET( VERSION_STRING ${arauwyr_VERSION}.dev )
 endif()
 
-set_target_properties(${TARGET} PROPERTIES VERSION ${VERSION_STRING})
+#set_target_properties(${TARGET} PROPERTIES VERSION ${VERSION_STRING})
