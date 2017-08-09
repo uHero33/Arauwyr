@@ -23,7 +23,7 @@ SET(project_UIS
 
 add_executable(${TARGET} ${project_sources} ${project_headers} ${project_UIS})
 
-set(Qt5_BASE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/Qt5/5.6/gcc_64 CACHE STRING
+set(Qt5_BASE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/qt5/gcc_64 CACHE STRING
 	"Qt5_BASE_DIR directory"
 	FORCE)
 
