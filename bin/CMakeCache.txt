@@ -207,6 +207,9 @@ Qt5Network_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5Network
 //The directory containing a CMake configuration file for Qt5OpenGL.
 Qt5OpenGL_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5OpenGL
 
+//The directory containing a CMake configuration file for Qt5Positioning.
+Qt5Positioning_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5Positioning
+
 //The directory containing a CMake configuration file for Qt5PrintSupport.
 Qt5PrintSupport_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5PrintSupport
 
@@ -218,6 +221,9 @@ Qt5Quick_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5Quick
 
 //The directory containing a CMake configuration file for Qt5Script.
 Qt5Script_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5Script
+
+//The directory containing a CMake configuration file for Qt5Sensors.
+Qt5Sensors_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5Sensors
 
 //The directory containing a CMake configuration file for Qt5SerialPort.
 Qt5SerialPort_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5SerialPort
@@ -231,11 +237,23 @@ Qt5WebChannel_DIR:PATH=Qt5WebChannel_DIR-NOTFOUND
 //The directory containing a CMake configuration file for Qt5WebEngineCore.
 Qt5WebEngineCore_DIR:PATH=/home/sebesd/dev/Arauwyr/3rdparty/Qt5/5.6/gcc_64/lib/cmake/Qt5WebEngineCore
 
+//The directory containing a CMake configuration file for Qt5WebEngine.
+Qt5WebEngine_DIR:PATH=Qt5WebEngine_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5WebKitWidgets.
+Qt5WebKitWidgets_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5WebKitWidgets
+
+//The directory containing a CMake configuration file for Qt5WebKit.
+Qt5WebKit_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5WebKit
+
 //The directory containing a CMake configuration file for Qt5Widget.
 Qt5Widget_DIR:PATH=Qt5Widget_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5Xml.
+Qt5Xml_DIR:PATH=/home/sebesd/Qt5.2.1/5.2.1/gcc_64/lib/cmake/Qt5Xml
 
 //Qt5_BASE_DIR directory
 Qt5_BASE_DIR:STRING=/home/sebesd/dev/Arauwyr/3rdparty/qt5/gcc_64

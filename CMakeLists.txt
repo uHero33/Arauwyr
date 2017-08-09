@@ -43,7 +43,7 @@ macro(find_qt_modules TO_FIND_MODULES)
 	endforeach(QT_Module)
 endmacro(find_qt_modules)
 
-set(QT_MODULES Core Gui Network OpenGL PrintSupport Qml Quick Script SerialPort Test WebChannel WebEngine WebEngineCore WebEngineWidgets Widgets Xml)
+set(QT_MODULES Core Gui Network OpenGL PrintSupport Qml Quick Script SerialPort Test WebKit WebKitWidgets Widgets Xml)
 set(QT_VERSION 5.6)
 
 find_qt_modules("${QT_MODULES}")
